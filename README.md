@@ -9,7 +9,7 @@ A fun, interactive, and responsive **Simon Says** game built with **HTML, CSS, a
 
 - **Responsive Design:** Works on mobile, tablet, and desktop devices.
 - **Multiple Difficulty Levels:** Gradually increases the challenge as you advance.
-- **Audio Feedback:** Each button press plays a unique sound.
+- **Audio Feedback:** When game is over it plays a unique sound.
 - **Level Tracking:** Keeps track of your current level.
 - **Fun UI:** Colorful and interactive buttons with smooth animations.
 - **User-Friendly:** Easy to play for all age groups.
