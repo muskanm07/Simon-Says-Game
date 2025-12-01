@@ -1,0 +1,124 @@
+/* ----------- Global ----------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ffeeee, #e9f4ff, #fff6dc);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ----------- Heading ----------- */
+
+#level-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #333;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+/* ----------- Game Buttons Container ----------- */
+
+.container {
+  width: 360px;
+  max-width: 95%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+/* ----------- Buttons (Tiles) ----------- */
+
+.btn {
+  width: 100%;
+  padding-top: 100%; /* Perfect square */
+  border-radius: 22px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.15s ease;
+  border: 4px solid rgba(255,255,255,0.8);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+/* Colors */
+.green  { background: #63e37c; }
+.red    { background: #ff6363; }
+.yellow { background: #ffe066; }
+.blue   { background: #63a6ff; }
+
+/* Glow when active */
+.pressed {
+  filter: brightness(1.4);
+  transform: scale(0.95);
+  box-shadow: 0 0 25px rgba(255,255,255,0.9);
+}
+
+/* Game Over Effect */
+.game-over {
+  background-color: rgba(255, 0, 0, 0.25) !important;
+  animation: shake 0.3s ease-in-out;
+}
+
+/* Shake Animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  50% { transform: translateX(8px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* ----------- Start Button ----------- */
+
+.start {
+  padding: 12px 35px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.start:hover {
+  transform: translateY(-3px);
+  background: #5850ff;
+}
+
+.start:active {
+  transform: translateY(2px);
+}
+
+/* ----------- Responsive ----------- */
+
+@media (max-width: 500px) {
+
+  #level-title {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    gap: 14px;
+  }
+
+  .start {
+    font-size: 1rem;
+    padding: 10px 28px;
+  }
+}
